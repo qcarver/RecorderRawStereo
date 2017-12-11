@@ -1,0 +1,244 @@
+Compiling 'AcousticTracker' for 'Teensy 3.2 / 3.1'
+ 
+SdFile.cpp: 25:57: error: 'void (* SdFile::dateTime_)(uint16_t*, uint16_t*)' is not a static data member of 'class SdFile
+   dateTime_)(uint16_t* date, uint16_t* time) = NULL
+ 
+SdFile.cpp: 33:28: error: no 'uint8_t SdFile::addCluster()' member function declared in class 'SdFile
+ uint8_t SdFile*: addCluster() {
+ 
+SdFile.cpp: 46:35: error: no 'uint8_t SdFile::addDirCluster()' member function declared in class 'SdFile
+ uint8_t SdFile*: addDirCluster(void) {
+ 
+SdFile.cpp: 61:44: error: no 'dir_t* SdFile::cacheDirEntry(uint8_t)' member function declared in class 'SdFile
+   cacheDirEntry(uint8_t action) {
+ 
+SdFile.cpp: 74:27: error: no 'uint8_t SdFile::close()' member function declared in class 'SdFile
+ uint8_t SdFile*: close(void) {
+ 
+SdFile.cpp: 91:71: error: no 'uint8_t SdFile::contiguousRange(uint32_t*, uint32_t*)' member function declared in class 'SdFile
+ uint8_t SdFile*: contiguousRange(uint32_t* bgnBlock, uint32_t* endBlock) {
+ 
+SdFile.cpp: 130:44: error: no 'uint8_t SdFile::createContiguous(SdFile*, const char*, uint32_t)' member function declared in class 'SdFile
+   const char* fileName, uint32_t size) {
+ 
+SdFile.cpp: 158:36: error: no 'uint8_t SdFile::dirEntry(dir_t*)' member function declared in class 'SdFile
+ uint8_t SdFile*: dirEntry(dir_t* dir) {
+ 
+SdFile.cpp: 178:50: error: no 'void SdFile::dirName(const dir_t&, char*)' member function declared in class 'SdFile
+ void SdFile*: dirName(const dir_t& dir, char* name) {
+ 
+SdFile.cpp: 201:46: error: no 'void SdFile::ls(uint8_t, uint8_t)' member function declared in class 'SdFile
+ void SdFile*: ls(uint8_t flags, uint8_t indent) {
+ 
+SdFile.cpp: 245:58: error: no 'uint8_t SdFile::make83Name(const char*, uint8_t*)' member function declared in class 'SdFile
+ uint8_t SdFile*: make83Name(const char* str, uint8_t* name) {
+ 
+SdFile.cpp: 284:57: error: no 'uint8_t SdFile::makeDir(SdFile*, const char*)' member function declared in class 'SdFile
+ uint8_t SdFile*: makeDir(SdFile* dir, const char* dirName) {
+ 
+SdFile.cpp: 384:74: error: no 'uint8_t SdFile::open(SdFile*, const char*, uint8_t)' member function declared in class 'SdFile
+ uint8_t SdFile*: open(SdFile* dirFile, const char* fileName, uint8_t oflag) {
+ 
+SdFile.cpp: 476:68: error: no 'uint8_t SdFile::open(SdFile*, uint16_t, uint8_t)' member function declared in class 'SdFile
+ uint8_t SdFile*: open(SdFile* dirFile, uint16_t index, uint8_t oflag) {
+ 
+SdFile.cpp: 502:64: error: no 'uint8_t SdFile::openCachedEntry(uint8_t, uint8_t)' member function declared in class 'SdFile
+ uint8_t SdFile*: openCachedEntry(uint8_t dirIndex, uint8_t oflag) {
+ 
+SdFile.cpp: 550:26: error: 'uint8_t SdFile::openRoot' is not a static data member of 'class SdFile
+ uint8_t SdFile*: openRoot(SdVolume* vol) {
+ 
+SdFile.cpp: 550:26: error: 'SdVolume' was not declared in this scope
+ 
+SdFile.cpp: 550:36: error: 'vol' was not declared in this scope
+ uint8_t SdFile*: openRoot(SdVolume* vol) {
+ 
+SdFile.cpp: 550:41: error: expected ',' or ';' before '{' token
+ uint8_t SdFile*: openRoot(SdVolume* vol) {
+ 
+SdVolume.cpp: 24:10: error: 'SdVolume' has not been declared
+ uint32_t SdVolume*: cacheBlockNumber_ = 0XFFFFFFFF
+ 
+SdVolume.cpp: 25:10: error: 'SdVolume' has not been declared
+ cache_t  SdVolume*: cacheBuffer_;     \\ 512 byte cache for Sd2Card
+ 
+SdVolume.cpp: 26:10: error: 'SdVolume' has not been declared
+   sdCard_;          \\ pointer to SD card object
+ 
+SdVolume.cpp: 27:10: error: 'SdVolume' has not been declared
+ uint8_t  SdVolume*: cacheDirty_ = 0;  \\ cacheFlush() will write block if true
+ 
+SdVolume.cpp: 28:10: error: 'SdVolume' has not been declared
+ uint32_t SdVolume*: cacheMirrorBlock_ = 0;  \\ mirror  block for second FAT
+ 
+SdVolume.cpp: 31:9: error: 'SdVolume' has not been declared
+ uint8_t SdVolume*: allocContiguous(uint32_t count, uint32_t* curCluster) {
+ 
+SdVolume.cpp: In function uint8_t allocContiguous(uint32_t, uint32_t*)
+ 
+SdVolume.cpp: 47:18: error: 'allocSearchStart_' was not declared in this scope
+   bgnCluster = allocSearchStart_
+ 
+SdVolume.cpp: 56:21: error: 'clusterCount_' was not declared in this scope
+   uint32_t fatEnd = clusterCount_ + 1
+ 
+SdVolume.cpp: 68:31: error: 'fatGet' was not declared in this scope
+   if (!fatGet(endCluster, &f)) return false
+ 
+SdVolume.cpp: 79:28: error: 'fatPutEOC' was not declared in this scope
+   if (!fatPutEOC(endCluster)) return false
+ 
+SdVolume.cpp: 83:43: error: 'fatPut' was not declared in this scope
+   if (!fatPut(endCluster - 1, endCluster)) return false
+ 
+SdVolume.cpp: 88:40: error: 'fatPut' was not declared in this scope
+   if (!fatPut(*curCluster, bgnCluster)) return false
+ 
+SdVolume.cpp: 94:17: error: 'allocSearchStart_' was not declared in this scope
+   if (setStart) allocSearchStart_ = bgnCluster + 1
+SdVolume.cpp: At global scope
+ 
+SdVolume.cpp: 99:9: error: 'SdVolume' has not been declared
+ uint8_t SdVolume*: cacheFlush(void) {
+ 
+SdVolume.cpp: 116:9: error: 'SdVolume' has not been declared
+ uint8_t SdVolume*: cacheRawBlock(uint32_t blockNumber, uint8_t action) {
+ 
+SdVolume.cpp: 127:9: error: 'SdVolume' has not been declared
+ uint8_t SdVolume*: cacheZeroBlock(uint32_t blockNumber) {
+ 
+SdVolume.cpp: In function uint8_t cacheZeroBlock(uint32_t)
+ 
+SdVolume.cpp: 135:17: error: 'cacheSetDirty' was not declared in this scope
+   cacheSetDirty()
+SdVolume.cpp: At global scope
+ 
+SdVolume.cpp: 140:9: error: 'SdVolume' has not been declared
+ uint8_t SdVolume*: chainSize(uint32_t cluster, uint32_t* size) const {
+ 
+SdVolume.cpp: 140:63: error: non-member function 'uint8_t chainSize(uint32_t, uint32_t*)' cannot have cv-qualifier
+ uint8_t SdVolume*: chainSize(uint32_t cluster, uint32_t* size) const {
+ 
+SdVolume.cpp: In function uint8_t chainSize(uint32_t, uint32_t*)
+ 
+SdVolume.cpp: 143:34: error: 'fatGet' was not declared in this scope
+   if (!fatGet(cluster, &cluster)) return false
+ 
+SdVolume.cpp: 144:19: error: 'clusterSizeShift_' was not declared in this scope
+   s += 512UL << clusterSizeShift_
+ 
+SdVolume.cpp: 145:26: error: 'isEOC' was not declared in this scope
+   } while (!isEOC(cluster))
+SdVolume.cpp: At global scope
+ 
+SdVolume.cpp: 151:9: error: 'SdVolume' has not been declared
+ uint8_t SdVolume*: fatGet(uint32_t cluster, uint32_t* value) const {
+ 
+SdVolume.cpp: 151:61: error: non-member function 'uint8_t fatGet(uint32_t, uint32_t*)' cannot have cv-qualifier
+ uint8_t SdVolume*: fatGet(uint32_t cluster, uint32_t* value) const {
+ 
+SdVolume.cpp: In function uint8_t fatGet(uint32_t, uint32_t*)
+ 
+SdVolume.cpp: 152:18: error: 'clusterCount_' was not declared in this scope
+   if (cluster > (clusterCount_ + 1)) return false
+ 
+SdVolume.cpp: 153:18: error: 'fatStartBlock_' was not declared in this scope
+   uint32_t lba = fatStartBlock_
+ 
+SdVolume.cpp: 154:10: error: 'fatType_' was not declared in this scope
+   cluster >> 7
+ 
+SdVolume.cpp: 156:29: error: 'CACHE_FOR_READ' was not declared in this scope
+   if (!cacheRawBlock(lba, CACHE_FOR_READ)) return false
+SdVolume.cpp: At global scope
+ 
+SdVolume.cpp: 167:9: error: 'SdVolume' has not been declared
+ uint8_t SdVolume*: fatPut(uint32_t cluster, uint32_t value) {
+ 
+SdVolume.cpp: In function uint8_t fatPut(uint32_t, uint32_t)
+ 
+SdVolume.cpp: 172:18: error: 'clusterCount_' was not declared in this scope
+   if (cluster > (clusterCount_ + 1)) return false
+ 
+SdVolume.cpp: 175:18: error: 'fatStartBlock_' was not declared in this scope
+   uint32_t lba = fatStartBlock_
+ 
+SdVolume.cpp: 176:10: error: 'fatType_' was not declared in this scope
+   cluster >> 7
+ 
+SdVolume.cpp: 179:29: error: 'CACHE_FOR_READ' was not declared in this scope
+   if (!cacheRawBlock(lba, CACHE_FOR_READ)) return false
+ 
+SdVolume.cpp: 187:17: error: 'cacheSetDirty' was not declared in this scope
+   cacheSetDirty()
+ 
+SdVolume.cpp: 190:7: error: 'fatCount_' was not declared in this scope
+   if (fatCount_ > 1) cacheMirrorBlock_ = lba + blocksPerFat_
+ 
+SdVolume.cpp: 190:48: error: 'blocksPerFat_' was not declared in this scope
+   if (fatCount_ > 1) cacheMirrorBlock_ = lba + blocksPerFat_
+SdVolume.cpp: At global scope
+ 
+SdVolume.cpp: 195:9: error: 'SdVolume' has not been declared
+ uint8_t SdVolume*: freeChain(uint32_t cluster) {
+ 
+SdVolume.cpp: In function uint8_t freeChain(uint32_t)
+ 
+SdVolume.cpp: 197:3: error: 'allocSearchStart_' was not declared in this scope
+   allocSearchStart_ = 2
+ 
+SdVolume.cpp: 207:26: error: 'isEOC' was not declared in this scope
+   } while (!isEOC(cluster))
+SdVolume.cpp: At global scope
+ 
+SdVolume.cpp: 227:9: error: 'SdVolume' has not been declared
+ uint8_t SdVolume*: init(Sd2Card* dev, uint8_t part) {
+ 
+SdVolume.cpp: In function uint8_t init(Sd2Card*, uint8_t)
+ 
+SdVolume.cpp: 234:42: error: 'CACHE_FOR_READ' was not declared in this scope
+   if (!cacheRawBlock(volumeStartBlock, CACHE_FOR_READ)) return false
+ 
+SdVolume.cpp: 244:40: error: 'CACHE_FOR_READ' was not declared in this scope
+   if (!cacheRawBlock(volumeStartBlock, CACHE_FOR_READ)) return false
+ 
+SdVolume.cpp: 245:34: error: 'fat_boot_t {aka struct fat_boot}' has no member named 'bpb
+   bpb_t* bpb = &cacheBuffer_.fbs.bpb
+ 
+SdVolume.cpp: 253:3: error: 'fatCount_' was not declared in this scope
+   fatCount_ = bpb->fatCount
+ 
+SdVolume.cpp: 254:3: error: 'blocksPerCluster_' was not declared in this scope
+   blocksPerCluster_ = bpb->sectorsPerCluster
+ 
+SdVolume.cpp: 257:3: error: 'clusterSizeShift_' was not declared in this scope
+   clusterSizeShift_ = 0
+ 
+SdVolume.cpp: 262:3: error: 'blocksPerFat_' was not declared in this scope
+   blocksPerFat_ = bpb->sectorsPerFat16 ?
+ 
+SdVolume.cpp: 265:3: error: 'fatStartBlock_' was not declared in this scope
+   fatStartBlock_ = volumeStartBlock + bpb->reservedSectorCount
+ 
+SdVolume.cpp: 268:3: error: 'rootDirEntryCount_' was not declared in this scope
+   rootDirEntryCount_ = bpb->rootDirEntryCount
+ 
+SdVolume.cpp: 271:3: error: 'rootDirStart_' was not declared in this scope
+   rootDirStart_ = fatStartBlock_ + bpb->fatCount * blocksPerFat_
+ 
+SdVolume.cpp: 274:3: error: 'dataStartBlock_' was not declared in this scope
+   dataStartBlock_ = rootDirStart_ + ((32 * bpb->rootDirEntryCount + 511)\512)
+ 
+SdVolume.cpp: 280:3: error: 'clusterCount_' was not declared in this scope
+   clusterCount_ = totalBlocks - (dataStartBlock_ - volumeStartBlock)
+ 
+SdVolume.cpp: 287:5: error: 'fatType_' was not declared in this scope
+   fatType_ = 12
+ 
+SdVolume.cpp: 289:5: error: 'fatType_' was not declared in this scope
+   fatType_ = 16
+ 
+SdVolume.cpp: 292:5: error: 'fatType_' was not declared in this scope
+   fatType_ = 32
+Error compiling libraries
+Build failed for project 'AcousticTracker'
